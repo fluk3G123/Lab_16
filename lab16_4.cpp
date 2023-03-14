@@ -17,3 +17,22 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a,int &b,int &c,int &d){
+	int p[4] = {a,b,c,d};
+	int q[4] ,count=0;
+	while (p[0] != 0 || p[1] != 0 || p[2] != 0 || p[3] != 0)
+	{
+		int random = rand()%4;
+		if (p[random] != 0 )
+		{
+			q[count] = p[random];
+			count+=1; 
+			p[random] = 0;
+		}
+	}
+	a = q[0];
+	b = q[1];
+	c = q[2];
+	d = q[3];
+}
